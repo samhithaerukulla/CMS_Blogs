@@ -1,0 +1,35 @@
+<div class="body-container">
+
+  <div class="w-100 d-flex justify-content-end p-2" >
+    <button class="btn btn-primary" (click)="redirect()">New Page+</button>
+  </div>
+<hr>
+<br>
+  <div class="form-contain">
+    <table class="w-100">
+      <tr>
+        <th>Title</th>
+        <th>Tags</th>
+        <th>Published</th>
+        <th>   </th>
+      </tr>
+      <ng-container *ngFor="let savedTitle of savedTitles">
+        <tr>
+          <td>{{ savedTitle.title }}</td>
+          <td>{{ savedTitle.tags }}</td>
+          
+          <td>{{ savedTitle.publish ? '✓' : '' }}</td>
+        
+          
+          <td><span class="edit-icon" (click)="redirectToEdit(savedTitle.title)">&#9998;</span></td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>
+
+
+
+
+ 
+  
